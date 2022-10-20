@@ -427,7 +427,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: #041827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -626,18 +626,34 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1222px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.container__header {
+  position: fixed;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.container__footer {
+  background-color: #041827;
 }
 
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
+  padding: 10px 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f2f5f7;
+  background-color: #041827;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -656,6 +672,11 @@ button,
 
 .btn.focus-visible:focus {
   opacity: 0.8;
+}
+
+.btn__phone-call {
+  border: 1px solid #f2f5f7;
+  border-radius: 3px;
 }
 
 .modal {
@@ -770,6 +791,128 @@ button,
   pointer-events: auto;
 }
 
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1222px;
+  min-height: 120px;
+  margin: 0 auto;
+}
+
+.main-header__logo {
+  display: block;
+}
+
+.main-header__logo-mobile {
+  display: none;
+}
+
+.main-header__information-container {
+  min-width: 480px;
+}
+
+.contacts__link {
+  font-style: normal;
+  color: #ffffff;
+}
+
+.contacts__icon {
+  fill: #00b2ff;
+}
+
+.contacts__address-text {
+  color: #ffffff;
+}
+
+.contacts__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-block {
+  min-height: 880px;
+  background-image: url("../img/background-desktop.png");
+  background-repeat: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.main-block__wrap {
+  width: 720px;
+  margin: 0 auto;
+  padding: 305px 0 0;
+}
+
+.advantages__wrap {
+  width: 1222px;
+  margin: 0 auto;
+}
+
+.advantages__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 31px;
+}
+
+.about-company__wrap {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.amenities__wrap {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.amenities__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.feedback-form__wrap {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.main-footer {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.information__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.information__link {
+  color: #ffffff;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -811,6 +954,24 @@ button,
   }
 */
 
+@media (max-width: 1023px) {
+  .btn__phone-call {
+    display: none;
+  }
+
+  .main-header {
+    width: 674px;
+  }
+
+  .main-header__information-container {
+    min-width: 100px;
+  }
+
+  .contacts__link span {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
@@ -827,6 +988,14 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .main-header__logo {
+    display: none;
+  }
+
+  .main-header__logo-mobile {
+    display: block;
   }
 }
 

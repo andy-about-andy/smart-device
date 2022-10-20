@@ -1,0 +1,12 @@
+.main-block {
+  min-height: 880px;
+  background-image: url("../img/background-desktop.png");
+  background-repeat: none;
+  object-fit: cover;
+}
+
+.main-block__wrap {
+  width: 720px;
+  margin: 0 auto;
+  padding: 305px 0 0;
+}

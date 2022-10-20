@@ -1,0 +1,27 @@
+// .contacts {
+
+// }
+
+.contacts__link {
+  font-style: normal;
+  color: $color-default-white;
+}
+
+.contacts__link span {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.contacts__icon {
+  fill: $color-brand;
+}
+
+.contacts__address-text {
+  color: $color-default-white;
+}
+
+.contacts__email {
+  display: flex;
+  justify-content: space-between;
+}
