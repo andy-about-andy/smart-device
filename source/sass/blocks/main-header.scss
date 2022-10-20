@@ -1,0 +1,36 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1222px;
+  min-height: 120px;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    width: 674px;
+  }
+}
+
+.main-header__logo {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.main-header__logo-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.main-header__information-container {
+  min-width: 480px;
+
+  @include vp-1023 {
+    min-width: 100px;
+  }
+}

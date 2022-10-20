@@ -1,0 +1,13 @@
+// .information {
+
+// }
+
+.information__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.information__link {
+  color: $color-default-white;
+}
