@@ -1,8 +1,13 @@
 .main-header {
+  position: fixed;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1222px;
+  width: 1220px;
   min-height: 120px;
   margin: 0 auto;
 
