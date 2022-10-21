@@ -1,8 +1,34 @@
-// .about-company {
-
-// }
+.about-company {
+  padding-bottom: 100px;
+}
 
 .about-company__wrap {
   width: 1220px;
   margin: 0 auto;
+  padding-left: 250px;
+
+  background-image: url("../img/icon-year.png");
+  background-repeat: no-repeat;
+
+
+  @include retina {
+    background-image: url("../img/icon-year@2x.png");
+  }
+
+  @include vp-767 {
+    background-image: none;
+  }
+}
+
+.about-company__title {
+  margin: 0;
+  // padding-bottom: 15px;
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about-company__text-inner {
+  line-height: 22px;
 }

@@ -1,0 +1,99 @@
+.form {
+  display: grid;
+  grid-template-columns: 275px 275px;
+  gap: 20px 30px;
+}
+
+.form--popup {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.form__group {
+  margin: 0;
+}
+
+.form__field {
+  min-width: 275px;
+  height: 50px;
+  padding: 15px;
+  color: $color-default-white;
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form__field--text {
+  grid-column: 1 / -1;
+  height: 155px;
+}
+
+.form__assent {
+  position: relative;
+}
+
+.form__assent-label {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.form__assent-label::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: $color-brand;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.form__assent-input[type="checkbox"]:checked + .form__assent-mark::before {
+  position: absolute;
+  content: "";
+  z-index: 5;
+  top: 27px;
+  left: 3px;
+  width: 9px;
+  height: 6px;
+  background-color: $color-brand;
+  background-image: url("../img/svg/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__field--popup {
+  width: 420px;
+}
+
+.form__assent-label--popup {
+  margin: 0;
+  padding-left: 34px;
+}
+
+.form__assent-label--popup::before {
+  top: 0;
+  left: 9px;
+}
+
+.form__assent-input[type="checkbox"]:checked + .form__assent-mark--popup::before {
+  top: 4px;
+  left: 11px;
+}

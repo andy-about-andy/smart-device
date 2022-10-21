@@ -1,6 +1,6 @@
-// .advantages {
-
-// }
+.advantages {
+  padding: 120px 0;
+}
 
 .advantages__wrap {
   width: 1220px;
@@ -12,4 +12,53 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px 31px;
+  margin: 0;
+  padding: 0;
 }
+
+.advantages__item {
+  position: relative;
+  padding: 40px 45px;
+  list-style-type: none;
+  border: 1px solid #ebebeb;
+
+  @include hover {
+    color: $color-secondary;
+    background-color: $color-brand;
+  }
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: $color-brand;
+}
+
+.advantages__icon {
+  fill: $color-brand;
+}
+
+.advantages__item:hover .advantages__icon {
+  fill: $color-secondary;
+}
+
+.advantages__title {
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-brand;
+}
+
+.advantages__item:hover .advantages__title {
+  color: $color-secondary;
+}
+
+.advantages__text {
+  line-height: 22px;
+}
+
