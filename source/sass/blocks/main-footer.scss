@@ -1,5 +1,38 @@
 .main-footer {
-  width: 1220px;
-  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 55px;
+  background-color: #041827;
+
+  @include vp-1023 {
+    padding-bottom: 65px;
+  }
+
+  @include vp-767 {
+    padding: 35px 0;
+  }
 }
 
+.main-footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  max-width: 1220px;
+  min-width: 936px;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    flex-direction: column;
+    max-width: 922px;
+    min-width: 670px;
+  }
+
+  @include vp-767 {
+    max-width: 767px;
+    min-width: 270px;
+  }
+}
+
+.main-footer__link-logo {
+  width: 215px;
+  height: 55px;
+}
