@@ -1,9 +1,51 @@
-// .feedback-form {
+.feedback-form {
+  position: relative;
+  z-index: 1;
+  background-color: #00b3ff;
 
-// }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 100%, 0 0, 50% 0);
+    background: rgba(4, 24, 39, 0.5);
+  }
+}
 
-.feedback-form__wrap {
-  width: 1220px;
+.feedback-form__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1220px;
   margin: 0 auto;
 }
 
+.feedback-form__wrap {
+  width: 585px;
+  padding: 170px 10px 250px 0;
+}
+
+.feedback-form__title {
+  margin: 0;
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+}
+
+.feedback-form__text {
+  display: block;
+  padding: 15px 0 35px;
+  color: $color-default-white;
+  line-height: 22px;
+}
+
+.feedback-form__image {
+  width: 510px;
+  height: 285px;
+  padding-top: 246px;
+}

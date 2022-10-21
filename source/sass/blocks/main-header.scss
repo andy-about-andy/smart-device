@@ -1,18 +1,29 @@
 .main-header {
   position: fixed;
+  z-index: 10;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
 }
 
 .main-header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1220px;
+  max-width: 1220px;
+  min-width: 936px;
   min-height: 120px;
   margin: 0 auto;
 
   @include vp-1023 {
-    width: 674px;
+    max-width: 922px;
+    min-width: 670px;
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    max-width: 767px;
+    min-width: 270px;
+    min-height: 70px;
   }
 }
 
@@ -33,9 +44,9 @@
 }
 
 .main-header__information-container {
-  min-width: 480px;
+  width: 480px;
 
   @include vp-1023 {
-    min-width: 100px;
+    max-width: 100px;
   }
 }
