@@ -1,7 +1,6 @@
 .about-company {
   padding: 0 40px 100px;
 
-
   @include vp-1023 {
     padding: 0 50px 100px;
   }
@@ -55,12 +54,30 @@
   }
 }
 
-.about-company__text--desktop {
+.about-company__text--hidden {
   display: none;
 }
 
-.about-company__text span {
+.about-company__text--visible {
+  display: block;
+}
+
+.about-company__text--hidden-inline {
   @include vp-767 {
     display: none;
   }
+}
+
+.about-company__text--visible-inline {
+  @include vp-767 {
+    display: inline;
+  }
+}
+
+.about-company__text--nojs {
+  display: block;
+}
+
+.about-company__text--nojs-inline {
+  display: inline;
 }
