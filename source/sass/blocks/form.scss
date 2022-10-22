@@ -1,7 +1,12 @@
 .form {
   display: grid;
-  grid-template-columns: 275px 275px;
+  grid-template-columns: 1fr 1fr;
   gap: 20px 30px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form--popup {
@@ -15,7 +20,7 @@
 }
 
 .form__field {
-  min-width: 275px;
+  width: 100%;
   height: 50px;
   padding: 15px;
   color: $color-default-white;
@@ -35,10 +40,19 @@
 .form__field--text {
   grid-column: 1 / -1;
   height: 155px;
+
+  @include vp-767 {
+    height: 180px;
+    padding: 25px 15px;
+  }
 }
 
 .form__assent {
   position: relative;
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
 }
 
 .form__assent-label {
@@ -51,6 +65,10 @@
   color: $color-default-white;
   opacity: 0.8;
   cursor: pointer;
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .form__assent-label::before {
@@ -77,6 +95,10 @@
   background-image: url("../img/svg/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @include vp-767 {
+    top: 11px;
+  }
 }
 
 .form__field--popup {
