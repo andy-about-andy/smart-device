@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import scroll from './modules/scroll/scroll';
 import hiddenText from './modules/hidden-text/hidden-text';
+import eventCalllback from './modules/mask-input-tel/mask-input-tel';
 
 // ---------------------------------
 
@@ -21,6 +22,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     scroll();
     hiddenText;
+    eventCalllback;
+
+    // поиск поля Имя модального окна и установка на него фокуса
+    // --------------------------------
+    // function setFocus() {
+    //   document.getElementById("form-name-popup").focus();
+    // }
+    // setFocus();
+
   });
 });
 

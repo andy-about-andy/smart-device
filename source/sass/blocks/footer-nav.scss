@@ -6,7 +6,7 @@
 .footer-nav__wrap {
   display: flex;
   justify-content: space-between;
-  width: 470px;
+  min-width: 470px;
   margin-right: 30px;
 
   @include vp-1023 {

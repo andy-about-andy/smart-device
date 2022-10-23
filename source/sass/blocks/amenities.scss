@@ -15,18 +15,18 @@
   max-width: 1220px;
   min-width: 944px;
   margin: 0 auto;
-  padding: 66px 0 140px;
+  padding: 66px 0 120px;
 
   @include vp-1023 {
     max-width: 923px;
     min-width: 670px;
-    padding: 55px 0 76px;
+    padding: 55px 0 55px;
   }
 
   @include vp-767 {
     max-width: 767px;
     min-width: 270px;
-    padding: 48px 0 86px;
+    padding: 48px 0 66px;
   }
 }
 
@@ -55,13 +55,17 @@
 }
 
 .amenities__list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(257px, 350px));
+  gap: 85px;
+  margin: 0 0 20px;
   padding: 53px 0 0;
   list-style-type: none;
 
   @include vp-1023 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
     flex-direction: column;
     padding-top: 38px;
   }
@@ -72,8 +76,6 @@
 }
 
 .amenities__item {
-  margin-right: 20px;
-
   @include vp-1023 {
     margin: 0 0 30px;
   }
@@ -91,7 +93,8 @@
   position: relative;
   display: block;
   max-width: 350px;
-  min-width: 300px;
+  min-width: 257px;
+  user-select: none;
 
   @include vp-1023 {
     max-width: 923px;

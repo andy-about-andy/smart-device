@@ -9,8 +9,10 @@
 }
 
 .contacts--header {
+  padding: 15px 0 25px;
+
   @include vp-1023 {
-    padding: 20px 0 41px;
+    padding: 20px 3px 41px 0;
   }
 
   @include vp-767 {
@@ -25,6 +27,14 @@
 
   @include hover {
     color: $color-brand;
+  }
+}
+
+.contacts__link .contacts__icon {
+  @include vp-1023 {
+    @include hover {
+      fill: $color-default-white;
+    }
   }
 }
 
@@ -101,6 +111,7 @@
 .contacts__email {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contacts__address {
@@ -126,12 +137,16 @@
 
 .contacts__item:first-child {
   padding-top: 10px;
+
+  @include vp-767 {
+    padding-top: 3px;
+  }
 }
 
 .contacts__item:last-child {
   padding-bottom: 0;
 
   @include vp-767 {
-    padding-bottom: 20px;
+    padding-bottom: 16px;
   }
 }

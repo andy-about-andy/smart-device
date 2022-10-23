@@ -84,6 +84,9 @@
 .accordion__item-content {
   @include vp-767 {
     display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
 
