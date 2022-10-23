@@ -15,18 +15,18 @@
   max-width: 1220px;
   min-width: 944px;
   margin: 0 auto;
-  padding: 70px 0 140px;
+  padding: 66px 0 140px;
 
   @include vp-1023 {
     max-width: 923px;
     min-width: 670px;
-    padding: 70px 0 140px;
+    padding: 55px 0 76px;
   }
 
   @include vp-767 {
     max-width: 767px;
     min-width: 270px;
-    padding: 50px 0 86px;
+    padding: 48px 0 86px;
   }
 }
 
@@ -49,6 +49,8 @@
 
   @include vp-767 {
     display: block;
+    font-size: 28px;
+    line-height: 39px;
   }
 }
 
@@ -56,11 +58,16 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 50px 0 0;
+  padding: 53px 0 0;
   list-style-type: none;
 
   @include vp-1023 {
     flex-direction: column;
+    padding-top: 38px;
+  }
+
+  @include vp-767 {
+    padding-top: 28px;
   }
 }
 
@@ -88,7 +95,7 @@
 
   @include vp-1023 {
     max-width: 923px;
-    min-width: 670px;
+    min-width: 668px;
   }
 
   @include vp-767 {
@@ -117,7 +124,12 @@
   border-radius: 3px 0 0 0;
   background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 54% 50%;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .amenities__text {
@@ -125,9 +137,19 @@
   top: 0;
   left: 0;
   width: 230px;
-  padding: 50px 0 0 40px;
+  padding: 48px 0 0 40px;
   font-family: $ff-robotocondensed;
   font-size: 20px;
   line-height: 30px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    width: 195px;
+    padding: 38px 0 0 45px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    padding: 27px 0 0 29px;
+  }
 }

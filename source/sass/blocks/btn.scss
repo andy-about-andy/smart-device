@@ -1,9 +1,6 @@
 .btn {
   display: inline-flex;
-  padding: 10px 15px;
-
-  // min-height: 40px;
-
+  padding: 11px 15px;
   font-family: $ff-robotocondensed;
   font-weight: 700;
   font-size: 14px;
@@ -34,6 +31,7 @@
 }
 
 .btn--phone-call {
+  margin: 35px 62px 45px 0;
   border: 1px solid $color-secondary;
   border-radius: 3px;
 
@@ -44,20 +42,21 @@
 
 .btn--consultation {
   min-height: 55px;
-  padding: 15px 25px;
+  padding: 15px 29px 15px 25px;
   font-size: 18px;
   line-height: 21px;
   background: $color-brand;
   border-radius: 3px;
 
   @include vp-1023 {
-    margin-left: 45px;
+    margin-left: 46px;
+    padding: 15px 29px 15px 25px;
   }
 
   @include vp-767 {
     min-height: 40px;
     margin: 0;
-    padding: 10px 30px;
+    padding: 12px 38px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -72,12 +71,24 @@
   background-color: $color-default-white;
   border: 1px solid $color-brand;
   border-radius: 3px;
+
+  @include vp-1023 {
+    margin-top: 10px;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    min-height: 35px;
+    margin-top: 6px;
+    padding: 8px 15px;
+  }
 }
 
 .btn--form-send {
   display: block;
   max-width: 265px;
-  padding: 15px;
+  margin-top: 15px;
+  padding: 15px 15px 11px;
   font-size: 16px;
   line-height: 19px;
   border-radius: 3px;
@@ -85,6 +96,7 @@
   @include vp-767 {
     width: 100%;
     max-width: 717px;
+    margin-top: 10px;
   }
 }
 

@@ -1,8 +1,11 @@
 .main-block {
   min-height: 880px;
+  margin: 0 auto;
+  padding: 0 40px;
   background-image: url("../img/background-desktop.png");
-  object-fit: cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 0;
 
 
   @include retina {
@@ -11,8 +14,9 @@
 
   @include vp-1023 {
     min-height: 640px;
+    padding: 0 50px;
     background-image: url("../img/background-tablet.png");
-    background-size: 100% auto;
+    background-position: 19.7% 0;
 
     @include retina {
       background-image: url("../img/background-tablet@2x.png");
@@ -21,7 +25,9 @@
 
   @include vp-767 {
     min-height: 560px;
+    padding: 0 25px;
     background-image: url("../img/background-mobile.png");
+    background-position: 25.5% 0;
 
     @include retina {
       background-image: url("../img/background-mobile@2x.png");
@@ -30,22 +36,30 @@
 }
 
 .main-block__wrap {
-  width: 980px;
+  position: relative;
+  top: 0;
+  left: -4.6%;
+  max-width: 800px;
+  min-width: 720px;
   margin: 0 auto;
-  padding: 305px 0 0 40px;
+  padding: 305px 0 0 0;
 
   @include vp-1023 {
-    width: 670px;
+    left: 0;
+    max-width: 720px;
+    min-width: 668px;
     padding: 180px 0 0;
   }
 
   @include vp-767 {
-    width: 270px;
+    max-width: 717px;
+    min-width: 270px;
     padding: 150px 0 0;
   }
 }
 
 .main-block__titel {
+  display: block;
   margin: 0;
   font-family: $ff-robotocondensed;
   font-size: 80px;
@@ -55,11 +69,15 @@
   color: $color-secondary;
 
   @include vp-1023 {
+    max-width: 800px;
+    min-width: 668px;
     font-size: 64px;
     line-height: 75px;
   }
 
   @include vp-767 {
+    max-width: 717px;
+    min-width: 270px;
     font-size: 36px;
     line-height: 42px;
   }
@@ -68,16 +86,17 @@
 .main-block__text {
   display: block;
   max-width: 685px;
-  padding: 40px 0;
+  padding: 31px 0 48px;
   font-size: 22px;
   line-height: 34px;
   color: $color-secondary;
 
   @include vp-1023 {
-    padding: 20px 0 50px;
+    padding: 0 0 58px;
   }
 
   @include vp-767 {
+    padding: 8px 0 44px;
     font-size: 14px;
     line-height: 22px;
   }
