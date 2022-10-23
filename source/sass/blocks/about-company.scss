@@ -2,7 +2,7 @@
   padding: 0 40px 100px;
 
   @include vp-1023 {
-    padding: 0 50px 100px;
+    padding: 0 50px 60px;
   }
 
   @include vp-767 {
@@ -14,10 +14,11 @@
   max-width: 1220px;
   min-width: 944px;
   margin: 0 auto;
-  padding-left: 250px;
+  padding: 0 0 19px 250px;
   background-image: url("../img/icon-year.png");
   background-repeat: no-repeat;
-  // background-position: top 0 left 0;
+  background-size: 150px 320px;
+  background-position: top 0 left 0;
 
   @include retina {
     background-image: url("../img/icon-year@2x.png");
@@ -25,8 +26,9 @@
 
   @include vp-1023 {
     max-width: 923px;
-    min-width: 750px;
-    padding-left: 190px;
+    min-width: 668px;
+    padding-left: 175px;
+    background-position: top 5px left -3px;
   }
 
   @include vp-767 {
@@ -43,14 +45,33 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .about-company__text-inner {
   line-height: 22px;
-  padding-bottom: 40px;
+  padding-bottom: 29px;
 
   @include vp-1023 {
     padding-bottom: 0;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about-company__text {
+  margin: 0;
+  padding: 12px 0 10px;
+
+  @include vp-1023 {
+    padding-bottom: 7px;
   }
 }
 

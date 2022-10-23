@@ -1,6 +1,6 @@
 .contacts {
   @include vp-1023 {
-    padding-right: 20px;
+    padding: 0 0 41px;
   }
 
   @include vp-767 {
@@ -8,23 +8,82 @@
   }
 }
 
+.contacts--header {
+  @include vp-1023 {
+    padding: 20px 0 41px;
+  }
+
+  @include vp-767 {
+    padding: 10px 10px 20px 0;
+  }
+}
+
 .contacts__link {
+  display: flex;
   font-style: normal;
   color: $color-default-white;
+
+  @include hover {
+    color: $color-brand;
+  }
 }
 
 .contacts__link span {
+  display: block;
+  padding-left: 15px;
+
   @include vp-1023 {
     display: none;
   }
 }
 
+.contacts__link--email {
+  margin-left: 7px;
+
+  @include vp-1023 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.contacts__link--phone-header {
+  margin-right: 13px;
+
+  @include vp-1023 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 18px 0 0;
+    padding: 10px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
 .contacts__link--phone {
+  display: block;
   opacity: 0.7;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 
 .contacts__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
   fill: $color-brand;
+
+  @include vp-1023 {
+    margin: 0;
+  }
 }
 
 .contacts__address-text {
@@ -32,6 +91,11 @@
   line-height: 22px;
   color: $color-default-white;
   opacity: 0.7;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .contacts__email {
@@ -44,6 +108,10 @@
   flex-direction: column;
   max-width: 345px;
   min-width: 220px;
+
+  @include vp-1023 {
+    max-width: 320px;
+  }
 }
 
 .contacts__list {
@@ -52,7 +120,7 @@
 }
 
 .contacts__item {
-  padding-bottom: 10px;
+  padding: 4px 0 0;
   list-style-type: none;
 }
 
