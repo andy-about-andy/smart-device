@@ -24,13 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
     hiddenText;
     eventCalllback;
 
-    // поиск поля Имя модального окна и установка на него фокуса
-    // --------------------------------
-    // function setFocus() {
-    //   document.getElementById("form-name-popup").focus();
-    // }
-    // setFocus();
-
   });
 });
 

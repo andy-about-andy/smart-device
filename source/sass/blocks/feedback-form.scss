@@ -3,8 +3,17 @@
   z-index: 1;
   padding: 0 40px;
   background-color: #00b3ff;
+  background-image: url("../img/paper-airplane.webp");
+  background-size: 510px 285px;
+  background-repeat: no-repeat;
+  background-position: left 25% top 44%;
+
+  @media (min-width: $vp-1024) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/paper-airplane@2x.webp");
+  }
 
   @include vp-1023 {
+    background-image: none;
     padding: 0 50px;
   }
 
@@ -51,6 +60,7 @@
   width: 100%;
   max-width: 590px;
   min-width: 450px;
+  margin: 0 0 0 auto;
   padding: 166px 10px 248px 0;
 
   @include vp-1023 {
@@ -94,23 +104,5 @@
     padding-bottom: 33px;
     font-size: 14px;
     line-height: 19px;
-  }
-}
-
-.feedback-form__image img {
-  display: block;
-  width: 100%;
-  max-width: 510px;
-  min-width: 460px;
-  height: auto;
-  padding: 246px 0 0;
-  margin-right: 20px;
-}
-
-.feedback-form__image {
-  display: block;
-
-  @include vp-1023 {
-    display: none;
   }
 }
