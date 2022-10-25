@@ -45,7 +45,7 @@
                 </a>
               </address>
             </div>
-            <a class="btn btn--phone-call" href="#" data-open-modal="feedback">Заказать звонок</a>
+            <a class="btn btn--phone-call" href="#" data-test data-open-modal="feedback">Заказать звонок</a>
           </div>
         </div>
       </header>
@@ -53,7 +53,7 @@
         <section class="main-block">
           <div class="main-block__wrap">
             <h1 class="main-block__titel" >Печатные платы</h1>
-            <span class="main-block__text">производство и монтаж, поставка комплектующих, блоков и модулей</span>
+            <p class="main-block__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
             <button class="btn btn--consultation" type="button" data-scroll-button>
               <span class="main-block__button-text">Получить бесплатную консультацию</span>
               <span class="main-block__button-text">Бесплатная консультация</span>
@@ -126,7 +126,7 @@
               </li>
               <li class="amenities__item">
                 <a href="#" class="amenities__link">
-                  <div class="amenities__text">Монтаж печатных плат</div>
+                  <div class="amenities__text amenities__text--tablet">Монтаж <br>печатных плат</div>
                   <picture>
                     <source width="350" height="650" media="(min-width: 1024px)" type="image/webp" srcset="img/amenities-desktop-2.webp 1x, img/amenities-desktop-2@2x.webp 2x">
                     <source width="670" height="250" media="(min-width: 768px)" type="image/webp" srcset="img/amenities-tablet-2.webp 1x, img/amenities-tablet-2@2x.webp 2x">
@@ -151,22 +151,16 @@
         </section>
         <section class="feedback-form" data-scroll-form>
           <div class="feedback-form__container">
-            <div class="feedback-form__image">
-              <picture>
-                <source width="510" height="285" media="(min-width: 1024px)" type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
-                <img loading="lazy" width="510" height="285" src="img/paper-airplane.png" srcset="img/paper-airplane@2x.jpg 2x" alt="Бумажный самолёт.">
-              </picture>
-            </div>
             <div class="feedback-form__wrap">
               <h2 class="feedback-form__title">Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
               <span class="feedback-form__text">Мы проконсультируем Вас бесплатно</span>
               <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__field form__field--name">
-                  <label for="form-name"></label>
+                  <label class="visually-hidden" for="form-name">Введите своё имя.</label>
                   <input type="text" id="form-name" name="name" placeholder="Имя" required>
                 </div>
                 <div class="form__field form__field--phone">
-                  <label for="number-phone"></label>
+                  <label class="visually-hidden" for="number-phone">Введите свой номер мобильного телефона.</label>
                   <input type="tel" id="number-phone" name="number-phone" placeholder="Телефон" required data-mask-tel>
                 </div>
                 <div class="form__field form__field--text">
@@ -292,11 +286,11 @@
           </button>
           <form class="form form--popup" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__field form__field--popup">
-              <label for="form-name-popup"></label>
+              <label class="visually-hidden" for="form-name-popup">Введите своё имя.</label>
               <input type="text" id="form-name-popup" name="name" placeholder="Имя" required>
             </div>
             <div class="form__field form__field--popup">
-              <label for="number-phone-popup"></label>
+              <label class="visually-hidden" for="number-phone-popup">Введите свой номер мобильного телефона.</label>
               <input type="tel" id="number-phone-popup" name="number-phone" placeholder="Телефон" required data-mask-tel>
             </div>
             <div class="form__field form__field--text">
