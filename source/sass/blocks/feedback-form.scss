@@ -4,12 +4,28 @@
   padding: 0 40px;
   background-color: #00b3ff;
   background-image: url("../img/paper-airplane.webp");
-  background-size: 510px 285px;
+  background-size: 510px auto;
   background-repeat: no-repeat;
   background-position: left 25% top 44%;
 
   @media (min-width: $vp-1024) and (min-resolution: $retina-dppx) {
     background-image: url("../img/paper-airplane@2x.webp");
+  }
+
+  @include vp-1469 {
+    background-size: 450px auto;
+  }
+
+  @include vp-1299 {
+    background-size: 350px auto;
+  }
+
+  @include vp-1219 {
+    background-size: 290px auto;
+  }
+
+  @include vp-1149 {
+    background-size: 250px auto;
   }
 
   @include vp-1023 {
@@ -63,6 +79,11 @@
   margin: 0 0 0 auto;
   padding: 166px 10px 248px 0;
 
+  @include vp-1299 {
+    max-width: 530px;
+  }
+
+
   @include vp-1023 {
     max-width: 923px;
     min-width: 668px;
@@ -72,7 +93,7 @@
   @include vp-767 {
     max-width: 717px;
     min-width: 270px;
-    padding: 48px 0 88px;
+    padding: 48px 0 87px;
   }
 }
 

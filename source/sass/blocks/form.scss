@@ -39,7 +39,6 @@
 }
 
 .form__field--text textarea {
-
   height: 155px;
   padding: 23px 15px;
 
@@ -55,6 +54,15 @@
 
 .form__assent {
   position: relative;
+  margin: 0 auto 0 40px;
+
+  @include vp-1023 {
+    margin-left: 85px;
+  }
+
+  @include vp-767 {
+    margin: 20px 0 0;
+  }
 }
 
 .form__assent-label {
@@ -137,7 +145,31 @@ input[type="checkbox"]:checked + .form__assent-mark::before {
   left: 9px;
 }
 
-.form__assent-input[type="checkbox"]:checked + .form__assent-mark--popup::before {
+.form__assent-input--modal[type="checkbox"]:checked + .form__assent-mark--popup::before {
   top: 4px;
   left: 11px;
+}
+
+.form__assent-input:focus ~ .form__assent-label::before {
+  border: 2px solid $color-default-black;
+}
+
+.form__inner {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+  }
+}
+
+.form__inner-popup {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__assent-popup {
+  margin: 18px 0 3px;
 }

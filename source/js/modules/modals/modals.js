@@ -168,6 +168,8 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      let inputNamePopup = document.getElementById('form-name-popup');
+      inputNamePopup.focus();
     }, this._eventTimeout);
   }
 
