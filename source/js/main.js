@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import scroll from './modules/scroll/scroll';
 import hiddenText from './modules/hidden-text/hidden-text';
-import eventCalllback from './modules/mask-input-tel/mask-input-tel';
+import phoneInputs from './modules/mask-input-tel/mask-input-tel';
 
 // ---------------------------------
 
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     scroll();
     hiddenText;
-    eventCalllback;
+    phoneInputs;
 
   });
 });
